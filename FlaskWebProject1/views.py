@@ -35,3 +35,7 @@ def about():
         year=datetime.now().year,
         message='Your application description page.'
     )
+
+@app.route('/teste')
+def teste():
+    return 'teste working'
