@@ -33,6 +33,7 @@ def teste():
 
 
 @app.route('/api/herdeiros/eventos/all')
+@app.route('/api/herdeiros/events/all')
 def get_all_events():
     return jsonify(events)
 
@@ -43,7 +44,7 @@ def get_all_itens():
 
 
 @app.route('/api/herdeiros/item/create/<name>/<description>')
-def create_events(name, description):
+def create_item(name, description):
     item = {}
     item['name'] = name
     item['description'] = description
@@ -56,7 +57,7 @@ def create_events(name, description):
 
 
 @app.route('/api/herdeiros/eventos/create/<name>/<date>')
-def create_events(name, date):
+def create_event(name, date):
     evento = {}
     evento['name'] = name
     evento['date'] = date
