@@ -51,9 +51,9 @@ def create_item(name, description):
     item_j = json.dumps(item)
     itens.append(item_j)
     f = open(itens_path, 'w+')
-    f.write(itens)
+    f.write(item_j)
     f.close()
-    return 'Event created with success!'
+    return 'Item created with success!'
 
 
 @app.route('/api/herdeiros/eventos/create/<name>/<date>')
@@ -64,6 +64,6 @@ def create_event(name, date):
     evento_j = json.dumps(evento)
     events.append(evento_j)
     f = open(events_path, 'w+')
-    f.write(events)
+    f.write(evento_j)
     f.close()
     return 'Event created with success!'
