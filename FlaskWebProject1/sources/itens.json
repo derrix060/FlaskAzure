@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Carro",
+        "description": "Utilizado no transporte das crianças."
+    },
+    {
+        "name": "Geladeira",
+        "description": "Utilizada para refrigerar os lanches."
+    },
+    {
+        "name": "Camera",
+        "description": "Utilizada para a divulgação da ONG."
+    },
+    {
+        "name": "Microondas",
+        "description": "Utilizado no aquecimento dos lanches."
+    },
+    {
+        "name": "Computador",
+        "description": "Utilizado para acompanhar o desempenho das crianças."
+    }
+]

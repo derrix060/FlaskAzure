@@ -2,40 +2,51 @@
 Routes and views for the flask application.
 """
 
-from datetime import datetime
-from flask import render_template
 from FlaskWebProject1 import app
+
+events_path = './FlaskWebProject1/sources/events.json'
+itens_path = './FlaskWebProject1/sources/itens.json'
+
+f = open(events_path, 'r')
+events = []
+events = f.read()
+f.close()
+f = open(itens_path, 'r')
+itens = []
+itens = f.read()
+f.close()
 
 @app.route('/')
 @app.route('/home')
 def home():
-    """Renders the home page."""
-    return render_template(
-        'index.html',
-        title='Home Page',
-        year=datetime.now().year,
-    )
-
-@app.route('/contact')
-def contact():
-    """Renders the contact page."""
-    return render_template(
-        'contact.html',
-        title='Contact',
-        year=datetime.now().year,
-        message='Your contact page.'
-    )
-
-@app.route('/about')
-def about():
-    """Renders the about page."""
-    return render_template(
-        'about.html',
-        title='About',
-        year=datetime.now().year,
-        message='Your application description page.'
-    )
+    return 'Hello World'
 
 @app.route('/teste')
 def teste():
     return 'teste working'
+
+
+@app.route('/api/herdeiros/eventos/all')
+def get_all_events():
+    return events
+
+
+@app.route('/api/herdeiros/itens/all')
+def get_all_itens():
+    return jsonify(itens)
+
+
+@app.route('/create_events')
+def create_events():
+    eventos = []
+    evento = {}
+    evento['name'] = 'teste name'
+    evento['date'] = "2017-06-05 17:00:00"
+    eventos.append(evento)
+    eventos.append(evento)
+    eventos.append(evento)
+    rtn = jsonify(eventos)
+    f = open(events_path, 'w+')
+    f.write(rtn)
+    f.close()
+    return rtn
