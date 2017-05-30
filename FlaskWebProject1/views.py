@@ -8,11 +8,12 @@ import json
 
 events_path = './FlaskWebProject1/sources/events.json'
 itens_path = './FlaskWebProject1/sources/itens.json'
+events = []
+itens = []
 
 def update_events():
     # Get Events
     f = open(events_path, 'r')
-    events = []
     events_file = f.read()
     events_j = json.loads(events_file)
     for event in events_j:
@@ -22,7 +23,6 @@ def update_events():
 def update_itens():
     # Get Itens
     f = open(itens_path, 'r')
-    itens = []
     itens_file = f.read()
     itens_j = json.loads(itens_file)
     for it in itens_j:
