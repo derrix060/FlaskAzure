@@ -9,19 +9,19 @@ example of return:
 ```json
 {
   "events": [
-    {
-      "date": "2017-06-05 17:00:00", 
-      "name": "Noite do Bingo"
-    }, 
-    {
-      "date": "Poker", 
-      "name": "2017-06-13 16:00:00"
-    }, 
-    {
-      "date": "Truco", 
-      "name": "2017-06-16 18:00:00"
-    }
-  ]
+  {
+    "date": "2017-06-05 17:00:00",
+    "name": "Bingo"
+  },
+  {
+    "name": "Poker",
+    "date": "2017-06-13 16:00:00"
+  },
+  {
+    "name": "Truco",
+    "date": "2017-06-16 18:00:00"
+  }
+]
 }
 ```
 
