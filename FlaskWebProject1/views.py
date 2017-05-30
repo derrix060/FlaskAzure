@@ -49,7 +49,7 @@ def get_all_events_2():
     events_file = f.read()
     events_j = json.loads(events_file)
     f.close()
-    return events_j
+    return str(events_j)
 
 
 @app.route('/api/herdeiros/itens/all')
