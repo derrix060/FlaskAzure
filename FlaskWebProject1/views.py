@@ -40,7 +40,7 @@ def home():
 
 @app.route('/api/herdeiros/events/all')
 def get_all_events():
-    return jsonify(events)
+    return jsonify({'events': events})
 
 
 @app.route('/api/herdeiros/events/all_2')
