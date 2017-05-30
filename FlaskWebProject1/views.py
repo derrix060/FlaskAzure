@@ -40,8 +40,16 @@ def home():
 
 @app.route('/api/herdeiros/events/all')
 def get_all_events():
-    update_events()
     return jsonify(events)
+
+
+@app.route('/api/herdeiros/events/all_2')
+def get_all_events_2():
+    f = open(events_path, 'r')
+    events_file = f.read()
+    events_j = json.loads(events_file)
+    f.close()
+    return events_j
 
 
 @app.route('/api/herdeiros/itens/all')
