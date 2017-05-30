@@ -9,23 +9,26 @@ import json
 events_path = './FlaskWebProject1/sources/events.json'
 itens_path = './FlaskWebProject1/sources/itens.json'
 
-# Get Events
-f = open(events_path, 'r')
-events = []
-events_file = f.read()
-events_j = json.loads(events_file)
-for event in events_j:
-    events.append(event)
-f.close()
+def update_events():
+    # Get Events
+    f = open(events_path, 'r')
+    events = []
+    events_file = f.read()
+    events_j = json.loads(events_file)
+    for event in events_j:
+        events.append(event)
+    f.close()
 
-# Get Itens
-f = open(itens_path, 'r')
-itens = []
-itens_file = f.read()
-itens_j = json.loads(itens_file)
-for it in itens_j:
-    itens.append(it)
-f.close()
+def update_itens():
+    # Get Itens
+    f = open(itens_path, 'r')
+    itens = []
+    itens_file = f.read()
+    itens_j = json.loads(itens_file)
+    for it in itens_j:
+        itens.append(it)
+    f.close()
+
 
 @app.route('/')
 @app.route('/home')

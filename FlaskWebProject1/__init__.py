@@ -6,3 +6,6 @@ from flask import Flask
 app = Flask(__name__)
 
 import FlaskWebProject1.views
+
+views.update_events()
+views.update_itens()
