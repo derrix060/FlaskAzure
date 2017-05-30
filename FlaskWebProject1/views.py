@@ -11,6 +11,7 @@ itens_path = './FlaskWebProject1/sources/itens.json'
 events = []
 itens = []
 
+
 def update_events():
     # Get Events
     f = open(events_path, 'r')
@@ -19,6 +20,7 @@ def update_events():
     for event in events_j:
         events.append(event)
     f.close()
+
 
 def update_itens():
     # Get Itens
@@ -38,6 +40,7 @@ def home():
 
 @app.route('/api/herdeiros/events/all')
 def get_all_events():
+    update_events()
     return jsonify(events)
 
 
