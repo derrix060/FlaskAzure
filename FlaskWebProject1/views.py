@@ -43,14 +43,9 @@ def get_all_events():
     return jsonify({'events': events})
 
 
-@app.route('/api/herdeiros/events/all_2')
-def get_all_events_2():
-    return str(len(events))
-
-
 @app.route('/api/herdeiros/itens/all')
 def get_all_itens():
-    return jsonify(itens)
+    return jsonify({'itens': itens})
 
 
 @app.route('/api/herdeiros/item/create/<name>/<description>')
