@@ -1,7 +1,49 @@
-# Flask for Azure Web Apps [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
+# OngHerdeirosBackend
 
-Flask is a microframework for Python based on Werkzeug, Jinja 2 and good intentions. And before you ask: It's [BSD licensed](http://flask.pocoo.org/docs/license/).
+This is a service to get itens needed by Ong Herdeiros and all the events.
 
-[Read the documentation or download as PDF](http://flask.pocoo.org/docs/0.10/)
+## Events
+To see all the events, make a GET request to this endpoint: http://flaskappteste.azurewebsites.net/api/herdeiros/events/all
 
+example of return:
+```json
+{
+  "events": [
+    {
+      "date": "2017-06-05 17:00:00", 
+      "name": "Noite do Bingo"
+    }, 
+    {
+      "date": "Poker", 
+      "name": "2017-06-13 16:00:00"
+    }, 
+    {
+      "date": "Truco", 
+      "name": "2017-06-16 18:00:00"
+    }
+  ]
+}
+```
 
+## Itens needed
+To see all the itens needed, make a GET request to this endpoint: http://flaskappteste.azurewebsites.net/api/herdeiros/itens/all
+
+example of return:
+```json
+{
+  "itens": [
+    {
+      "description": "Geladeira", 
+      "name": "Geladeira"
+    }, 
+    {
+      "description": "Carro", 
+      "name": "Carro"
+    }, 
+    {
+      "description": "Fogao", 
+      "name": "Fogao"
+    }
+  ]
+}
+```
